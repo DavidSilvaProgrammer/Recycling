@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Faça um programa que leia o nome de um vendedor, o seu salário fixo e o total de vendas
+efetuadas por ele no mês (em dinheiro).*/
+
+int main()
+{
+    float s;
+    char nome[20],p[20];
+    
+    printf("Informe o nome do vendedor:\n");
+    fgets(nome,sizeof(nome),stdin);
+
+    
+    printf("Informe o salario:\n");
+    scanf("%f",&s);
+    
+    printf("Profissao:\n");
+    setbuf(stdin, 0);
+    fgets(p,sizeof(p),stdin);
+
+    
+    printf("\nNome: %s\nSalario: %0.2f\nProfissao: %s",nome, s,p);
+    
+   
+    return 0;
+}
