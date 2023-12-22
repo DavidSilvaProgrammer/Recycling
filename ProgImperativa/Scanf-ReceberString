@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    char nome[50];  // Assumindo que o nome terá no máximo 49 caracteres
+
+    printf("Digite o seu nome: ");
+    scanf("%49[^\n]", nome);
+
+    printf("O nome digitado: %s\n", nome);
+
+    return 0;
+}
+
+
+/*
+Neste exemplo, %49[^\n] é usado para ler uma linha de texto até encontrar uma quebra de linha (\n). 
+Isso permite a leitura de uma string que pode conter espaços em branco.
+
+No entanto, a limitação com esta abordagem é que ela não trata automaticamente o caso de entrada 
+muito longa que excede o tamanho do array nome. Portanto, é importante dimensionar adequadamente 
+o array e garantir que a entrada do usuário seja gerenciada de forma segura. Se a segurança é uma 
+preocupação, a utilização da função fgets é geralmente preferida.
+
+*/
