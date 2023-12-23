@@ -1,0 +1,20 @@
+/*Uma empresa contrata um funcionário a R$ 80,00 por dia. Faça
+um programa que solicite o número de dias trabalhados pelo
+funcionário e imprima a quantia líquida que deverá ser paga,
+sabendo-se que são descontados 8% para imposto de renda.*/
+
+#include <stdio.h>
+
+int main()
+{   int dias,bruto;
+    float imposto,liquido;
+    printf("Informe o numero de dias trabalhados:\n");
+    scanf("%d",&dias);
+    bruto=dias*80;
+    imposto= bruto*0.08;
+    liquido= bruto-imposto;
+    
+    printf("Salario bruto: %d\nSalario liquido: %0.2f\nImposto: %0.2f",bruto, liquido,imposto);
+    
+    return 0;
+}
