@@ -1,0 +1,69 @@
+#include <stdio.h>
+
+int main() {
+    float valor;
+    int inteiro, centavos, resto;
+
+    printf("Informe o valor monetário: ");
+    scanf("%f", &valor);
+
+    inteiro = (int)valor;
+    centavos = (int)((valor - inteiro) * 100);  // Obtém os centavos multiplicando por 100
+
+    // Calcula as cédulas
+    int cem = inteiro / 100;
+    resto = inteiro % 100;
+
+    int cinquenta = resto / 50;
+    resto %= 50;
+
+    int vinte = resto / 20;
+    resto %= 20;
+
+    int dez = resto / 10;
+    resto %= 10;
+
+    int cinco = resto / 5;
+    resto %= 5;
+
+    int dois = resto / 2;
+    resto %= 2;
+
+
+    // Calcula as moedas em centavos
+    
+    int um = resto;
+    
+    int cinquentac = centavos / 50;
+    resto = centavos % 50;
+
+    int vintecincoc = resto / 25;
+    resto %= 25;
+
+    int dezc = resto / 10;
+    resto %= 10;
+
+    int cincoc = resto / 5;
+    resto %= 5;
+
+    int umc = resto;
+
+    // Imprime os resultados
+    printf("Cédulas:\n");
+    printf("R$100: %d\n", cem);
+    printf("R$50: %d\n", cinquenta);
+    printf("R$20: %d\n", vinte);
+    printf("R$10: %d\n", dez);
+    printf("R$5: %d\n", cinco);
+    printf("R$2: %d\n", dois);
+
+    printf("Moedas:\n");
+    printf("R$1: %d\n", um);
+    printf("R$0.50: %d\n", cinquentac);
+    printf("R$0.25: %d\n", vintecincoc);
+    printf("R$0.10: %d\n", dezc);
+    printf("R$0.05: %d\n", cincoc);
+    printf("R$0.01: %d\n", umc);
+
+    return 0;
+}
